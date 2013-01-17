@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12C3012" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="v8W-O0-WG7">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller - 音-->
+        <scene sceneID="5">
+            <objects>
+                <viewController id="2" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3">
+                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3yW-Ut-RLF">
+                                <items>
+                                    <navigationItem title="音" id="vzs-fq-kGm"/>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IZc-Kt-ZYV">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="REC">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="recStart:" destination="2" eventType="touchUpInside" id="awQ-wZ-Mjl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WRU-EM-JdL">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="PLAY">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="play:" destination="2" eventType="touchUpInside" id="X6G-K0-nXV"/>
+                                    <action selector="resStop:" destination="2" eventType="touchUpInside" id="s7y-Ig-zbq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GWe-fr-MQD">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="STOP">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="resStop:" destination="2" eventType="touchUpInside" id="z3k-aE-K4M"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="GWe-fr-MQD" firstAttribute="centerX" secondItem="IZc-Kt-ZYV" secondAttribute="centerX" type="default" id="EwC-Od-cxC"/>
+                            <constraint firstItem="3yW-Ut-RLF" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="LFG-Dk-vbc"/>
+                            <constraint firstItem="3yW-Ut-RLF" firstAttribute="centerX" secondItem="IZc-Kt-ZYV" secondAttribute="centerX" type="default" id="NDr-F4-Xvj"/>
+                            <constraint firstItem="WRU-EM-JdL" firstAttribute="leading" secondItem="GWe-fr-MQD" secondAttribute="leading" type="default" id="O8j-v9-q0T"/>
+                            <constraint firstAttribute="bottom" secondItem="WRU-EM-JdL" secondAttribute="bottom" constant="206" id="VmV-v2-yPb"/>
+                            <constraint firstItem="IZc-Kt-ZYV" firstAttribute="top" secondItem="3" secondAttribute="top" constant="93" id="rDg-QO-jTT"/>
+                            <constraint firstItem="3yW-Ut-RLF" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="rjd-3A-4Al"/>
+                            <constraint firstItem="GWe-fr-MQD" firstAttribute="top" secondItem="3" secondAttribute="top" constant="170" id="ttu-bt-wrD"/>
+                            <constraint firstItem="3yW-Ut-RLF" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="uQO-C5-biZ"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="音" id="nAy-RP-tKk"/>
+                    <connections>
+                        <outlet property="play" destination="WRU-EM-JdL" id="fnE-8S-6e3"/>
+                        <outlet property="recStart" destination="IZc-Kt-ZYV" id="cTu-BZ-fI5"/>
+                        <outlet property="recStop" destination="GWe-fr-MQD" id="N0V-6Z-nW7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="696" y="648"/>
+        </scene>
+        <!--My Table View Controller - 日付-->
+        <scene sceneID="Rzd-KF-Ufg">
+            <objects>
+                <tableViewController id="d8S-SN-qWP" customClass="MyTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="RFN-Cm-kpp">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="wgK-ur-ewH">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="d8S-SN-qWP" id="YRd-0x-F2h"/>
+                            <outlet property="delegate" destination="d8S-SN-qWP" id="7Q3-ou-QWf"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="日付" id="DIM-N4-RFF"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IfD-0P-msi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1085" y="4"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Wy9-Yc-GTa">
+            <objects>
+                <tabBarController id="v8W-O0-WG7" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="5Ju-Jh-xiL">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="RbY-SW-G8Z" kind="relationship" relationship="viewControllers" id="CMC-EL-gg6"/>
+                        <segue destination="2" kind="relationship" relationship="viewControllers" id="kmA-uv-DGZ"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ne6-oq-2ba" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="209" y="140"/>
+        </scene>
+        <!--Navigation Controller - 日付-->
+        <scene sceneID="2Hi-6S-gc6">
+            <objects>
+                <navigationController id="RbY-SW-G8Z" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="日付" id="Js2-I4-kzh"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hrb-Al-skE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="d8S-SN-qWP" kind="relationship" relationship="rootViewController" id="NsY-lM-v55"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u4F-ji-Erg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="696" y="4"/>
+        </scene>
+    </scenes>
+    <classes>
+        <class className="MyTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MyTableViewController.h"/>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="play:"/>
+                <relationship kind="action" name="recStart:"/>
+                <relationship kind="action" name="resStop:"/>
+                <relationship kind="outlet" name="play" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="recStart" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="recStop" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
